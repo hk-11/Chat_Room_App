@@ -25,11 +25,11 @@ const Root = (props) => {
   const email = useSelector((state) => state?.user);
  
   const navigate = useNavigate();
-  //dispatch redux ke action ko call karna ke liya use kartay hn 
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
-    //this code is for checking that the user is login or not 
+    
     if (email?.user.email !== undefined) {
       navigate("/");
     } else {
@@ -38,7 +38,7 @@ const Root = (props) => {
     }
   }, []);
 
-  //Routes Define hn idhar App wala main ha jidhar chat ha 
+  
   return props.isLoading ? (
     <Spinner />
   ) : (
@@ -51,7 +51,7 @@ const Root = (props) => {
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-//redux ka store ke andar porri app ko rakhana hota ha 
+
 root.render(
   <Provider store={store}>
     <Router>
