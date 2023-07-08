@@ -18,7 +18,7 @@ import rootReducer from "./reducer";
 import Spinner from "./Spinner";
 import { logout } from "./action";
 
-//for redux store
+
 const store = createStore(rootReducer, composeWithDevTools());
 
 const Root = (props) => {
