@@ -23,7 +23,7 @@ const store = createStore(rootReducer, composeWithDevTools());
 
 const Root = (props) => {
   const email = useSelector((state) => state?.user);
-  //naviagte for navgation 
+ 
   const navigate = useNavigate();
   //dispatch redux ke action ko call karna ke liya use kartay hn 
   const dispatch = useDispatch();
