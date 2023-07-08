@@ -1,12 +1,6 @@
 import { combineReducers } from "redux";
 import * as actionTypes from "../action/types";
 
-// phir us action ke bad idhar atay hn hum ye ha reducer jo un action 
-// par kiya perform ho wo batatay hn 
-
-
-//login reducer start 
-
 const initialLoginState = {
   user: {},
 };
@@ -27,8 +21,6 @@ const user_login = (state = initialLoginState, action) => {
       return state;
   }
 };
-// reducer me switch hoti ha or action ke liya different case 
-//login reducer end
 
 
 const registerInitialState = {
@@ -69,7 +61,7 @@ const msgReducer = (state = msgInitialState, action) => {
 };
 
 
-// end me sab reducer ko ak me rakh kr export kar dety hn 
+ 
 const rootReducer = combineReducers({
   user: user_login,
   regiser: registerReducer,
