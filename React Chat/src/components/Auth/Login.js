@@ -20,7 +20,6 @@ const Login = () => {
   });
   const dispatch = useDispatch();
   const registerUser = useSelector((state) => state?.regiser);
-  //useselector hum redux se data nikalanay ke liya use kartay hn 
   const [errors, setErrors] = useState("");
 
   const [loading, setLoading] = useState(false);
