@@ -35,18 +35,17 @@ const Register = () => {
     let error;
 
     if (isFormEmpty(data)) {
-      //throw error if the form field is empty
+    
       error = { message: "Fill in all Fields" };
       setErrors(errors.concat(error));
       return false;
     } else if (!isPasswordValid(data)) {
-      //throw error if the password is invlaid
 
       error = { message: "Password is invalid| Max 6 Digit" };
       setErrors(errors.concat(error));
       return false;
     } else {
-      //form Valid
+      
       return true;
     }
   };
@@ -62,13 +61,13 @@ const Register = () => {
 
   const isPasswordValid = ({ password, passwordConfirmation }) => {
     if (password.length < 6 || passwordConfirmation.length < 6) {
-      // console.log("Password length")
+      
       return false;
     } else if (password !== passwordConfirmation) {
-      // console.log("password unmatch")
+      
       return false;
     } else {
-      // console.log("ok pass");
+     
       return true;
     }
   };
